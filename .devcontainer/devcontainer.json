@@ -1,0 +1,18 @@
+{
+  "name": "agent-tools-images",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteEnv": {
+    "VIRTUAL_ENV": "/opt/venv",
+    "PATH": "/opt/venv/bin:${containerEnv:PATH}"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/venv/bin/python"
+      }
+    }
+  }
+}
